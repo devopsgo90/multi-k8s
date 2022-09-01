@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: devops90-org-tls
+spec:
+  secretName: devops90-org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: devops90.org
+  dnsNames:
+    - devops90.org
+    - www.devops90.org
